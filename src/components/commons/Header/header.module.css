@@ -1,0 +1,70 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 1.5rem;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+   
+}
+
+.title{
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: lighter;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.btn{
+    background: #FFFFFF;
+    border: 1px solid #1DBEB4;
+    color: #1DBEB4;
+    border-radius: 5px;
+    width: 15rem;
+    height: 3rem;
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;  
+  }
+  
+  
+  .btn:hover{
+    transform: scale(1.1);
+    background-color: #4bb8b0a4;
+    color: rgb(255, 255, 255);
+  }
+
+  .burgerMenu{
+    display: none;
+  }
+
+  /*Tablet*/
+  @media  (max-width : 903px) {
+        .title{
+            display: none;
+        }
+  }
+
+  /*Celular*/
+  @media  (max-width : 662px) {
+    .burgerMenu{
+        display: block;
+    }
+
+    .right{
+        display: none;
+    }
+}
+
+
+  

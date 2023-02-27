@@ -1,0 +1,75 @@
+[
+    {
+        "id": 1,
+        "img": "../img/hotel-room.jpg",
+        "title": "Hermitage Hotel",
+        "number": "8",
+        "review": "Muy bueno",
+        "distance": "A 940 m del centro",
+        "description": "En el corazón de San Telmo, disfruta de un albergue inspirado en las pasiones de Buenos Aires.",
+        "stars": 5,
+        "category":"Hotel"
+        
+    },
+
+    {
+        "id": 2,
+        "img": "../img/depart-room.jpg",
+        "title": "Hermitage Hotel",
+        "number": 8,
+        "review": "Muy bueno",
+        "distance": "A 940 m del centro",
+        "description": "En el corazón de San Telmo, disfruta de un albergue inspirado en las pasiones de Buenos Aires.",
+        "stars": 5,
+        "category":"Hotel"
+    },
+
+    {
+        "id": 3,
+        "img": "../img/dormitorio-hotel.jpg",
+        "title": "Hermitage Hotel",
+        "number": 8,
+        "review": "Muy bueno",
+        "distance": "A 940 m del centro",
+        "description": "En el corazón de San Telmo, disfruta de un albergue inspirado en las pasiones de Buenos Aires.",
+        "stars": 5,
+        "category":"Hotel"
+    },
+
+    {
+        "id": 4,
+        "img": "../img/depart-room.jpg",
+        "title": "Hermitage Hotel",
+        "number": "8",
+        "review": "Muy bueno",
+        "distance": "A 940 m del centro",
+        "description": "En el corazón de San Telmo, disfruta de un albergue inspirado en las pasiones de Buenos Aires.",
+        "stars": 5,
+        "category":"Hotel"
+    },
+
+    {
+        "id": 5,
+        "img": "../img/hotel-room.jpg",
+        "title": "Hermitage Hotel",
+        "number": "8",
+        "review": "Muy bueno",
+        "distance": "A 940 m del centro",
+        "description": "En el corazón de San Telmo, disfruta de un albergue inspirado en las pasiones de Buenos Aires.",
+        "stars": 5,
+        "category":"Hotel"
+        
+    },
+
+    {
+        "id": 6,
+        "img": "../img/depart-room.jpg",
+        "title": "Hermitage Hotel",
+        "number": 8,
+        "review": "Muy bueno",
+        "distance": "A 940 m del centro",
+        "description": "En el corazón de San Telmo, disfruta de un albergue inspirado en las pasiones de Buenos Aires.",
+        "stars": 5,
+        "category":"Hotel"
+    }
+]

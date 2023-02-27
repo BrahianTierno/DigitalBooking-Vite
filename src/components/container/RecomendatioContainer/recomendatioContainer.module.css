@@ -1,0 +1,18 @@
+.container{
+    background-color: #F3F1ED;
+    
+}
+
+.sectionContainer{
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;   
+ margin-top: 2rem;
+ margin-left: 2rem;
+}
+
+.title{
+    margin-top: 2rem;
+    margin-left: 2rem;
+    color: #383B58;
+}

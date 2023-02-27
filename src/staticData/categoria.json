@@ -1,0 +1,35 @@
+
+
+[
+    {
+        "id": "1",
+        "img": "img/img-hotel.jpg",
+        "title": "Hotel",
+        "number": "807.254 hoteles"
+      
+    },
+
+    {
+        "id": "2",
+        "img": "img/img-hosteles.jpg",
+        "title": "Hosteles",
+        "number": "807.254"
+        
+    },
+
+    {
+        "id": "3",
+        "img": "img/img-departamento.jpg",
+        "title": "Departamentos",
+        "number": "807.254"
+       
+    },
+
+    {
+        "id": "4",
+        "img": "img/img-bab.jpg",
+        "title": "Brakefast and bed",
+        "number": "807.254"
+        
+    }
+]

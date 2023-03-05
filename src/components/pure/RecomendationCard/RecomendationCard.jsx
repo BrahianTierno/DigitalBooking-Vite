@@ -6,7 +6,10 @@ import { BiSwim , BiWifi  } from "react-icons/bi";
 const RecomendationCard = ({img, category, title, calification, review, direction, desciption}) => {
   return (
     <div className={styles.card}>        
-          <img className={styles.img} src={img} width="335px" height="320px" alt="imagen"/>              
+        <div  className={styles.imgContainer}>
+        <img className={styles.img} src={img} width="100%" height="100%" alt="imagen"/>   
+        </div>
+                     
         <div className={styles.rigth}>
             <section className={styles.rigth} >
                 <section className={styles.top}>

@@ -1,6 +1,7 @@
 .container {
     width: 25rem;
     margin-left: 1rem;
+    
 }
 
 .datePicker{
@@ -8,7 +9,10 @@
     height: 100%;
     color: #7F7F7F;
     font-weight: bold;
+    
 }
+
+
 
 /*Tablet*/
 @media  (max-width : 1048px) {

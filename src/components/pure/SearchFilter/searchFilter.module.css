@@ -47,6 +47,7 @@
 }
 
 
+
 /*Tablet*/
 @media  (max-width : 1048px) {
 
@@ -75,6 +76,8 @@
     .select{
         width: 14rem;
     }
+
+
 
 }
 

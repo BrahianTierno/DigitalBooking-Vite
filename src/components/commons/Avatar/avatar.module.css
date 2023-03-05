@@ -1,0 +1,18 @@
+.divProfile{
+    display: flex;
+    justify-content: space-between;
+    width:200px;
+    height: 40px;
+    font-size: 0.9rem;
+}
+
+.profile{
+    padding: 10px;
+    background-color: #545776;
+    color: white;
+    border-radius: 40px;    
+}
+
+.name{
+    color: #1DBEB4;  
+}

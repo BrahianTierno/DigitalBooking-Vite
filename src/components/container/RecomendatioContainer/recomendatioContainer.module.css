@@ -16,3 +16,13 @@
     margin-left: 2rem;
     color: #383B58;
 }
+
+@media (max-width: 1180px  ){
+
+    
+    .sectionContainer{
+        justify-content: center;
+        margin-left: 0px;
+    }
+
+}

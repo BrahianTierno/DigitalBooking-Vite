@@ -1,0 +1,17 @@
+.menuContainer{
+    width: 300px;
+    float: right;
+    top: 0%;
+    right: 10px;
+    height: 100vh;
+    background-color: red;
+    position: absolute;
+    z-index: 330px;
+
+}
+
+.top{
+    height: 20vh;
+    background-color: #08625D;
+    color: white;
+}

@@ -99,14 +99,7 @@
 
 
 
-  @media (max-width :  748px){ 
-    .card{
-        width: 520px;
-        height: 400px;
-        margin-left: 0px;
-        margin-right: 0px;
-    }      
-  }
+ 
 
   @media (max-width :  554px){ 
     .card{

@@ -72,6 +72,10 @@
     font-weight: bold;
   }
 
+  .imgContainer{
+    width:700px;
+    height: 320px;
+  }
 
 .img{
     border-radius: 10px;
@@ -95,11 +99,300 @@
     align-items: center;
 }
 
-@media (max-width: 1446  ){
+
+
+
+@media (max-width: 1406px  ){
 
     .card{
-
+        width: 649px;   
+        height: 320px;
+        margin-bottom: 50px;
     }
 
+    .title{
+       font-size: 1rem;
+    }
+
+    .middle{
+        font-size: 0.85rem;
+    }
+
+    .btn{
+        height: 2.5rem;
+        width: 15rem;
+    }
+
+}
+
+@media (max-width: 1362px  ){
+
+    .card{
+        width: 630px;   
+        height: 300px;
+        margin-bottom: 50px;
+    }
+
+    .imgContainer{
+        width:650px;
+        height: 320px;
+      }
+
+    .title{
+       font-size: 1rem;
+    }
+
+    .middle{
+        font-size: 0.8rem;
+    }
+
+    .btn{
+        height: 2.5rem;
+        width: 15rem;
+    }
+
+}
+
+@media (max-width: 1324px  ){
+
+    .card{
+        width: 600px;   
+        height: 320px;
+        margin-bottom: 50px;
+    }
+
+    .title{
+       font-size: 1rem;
+    }
+
+    .middle{
+        font-size: 0.8rem;
+    }
+
+    .btn{
+        height: 2.5rem;
+        width: 14rem;
+    }
+
+}
+
+@media (max-width: 1262px  ){
+
+    .card{
+        width: 580px;   
+        height: 300px;
+        margin-bottom: 50px;
+    }
+
+    .imgContainer{
+        width:650px;
+        height: 300px;
+      }
+      .top{      
+        margin-top: 1rem;   
+        margin-bottom: 1rem;       
+    }
+
+    .title{
+       font-size: 1rem;
+    }
+
+    .middle{
+        font-size: 0.75rem;
+    }
+
+    .btn{
+        height: 2.3rem;
+        width: 14rem;
+    }
+
+}
+
+@media (max-width: 1224px  ){
+
+    .card{
+        width: 560px;   
+        height: 280px;
+        margin-bottom: 50px;
+    }
+
+    .imgContainer{
+        width:650px;
+        height: 280px;
+      }
+      .top{      
+        margin-top: 0.5rem;   
+        margin-bottom: 0.5rem;     
+    }
+
+    .title{
+       font-size: 1rem;
+    }
+
+    .middle{
+        font-size: 0.75rem;
+    }
+
+    .btn{
+        height: 2.3rem;
+        width: 14rem;
+    }
+
+}
+
+@media (max-width: 1180px  ){
+
+    .card{
+        width: 680px;   
+        height: 280px;
+        margin-bottom: 50px;
+    }
+
+    .imgContainer{
+        width:650px;
+        height: 280px;
+      }
+      .top{      
+        margin-top: 1rem;   
+        margin-bottom: 1rem;     
+    }
+
+    
+
+    .btn{
+        height: 2.3rem;
+        width: 16rem;
+    }
+
+}
+
+@media (max-width: 720px  ){
+
+    .card{
+        width: 649px;   
+        height: 290px;
+        margin-bottom: 50px;
+    }
+
+    .title{
+        font-size: 1.4rem;
+     }
+ 
+     .middle{
+         font-size: 0.85rem;
+     }
+
+    .btn{
+        height: 2.5rem;
+        width: 15rem;
+    }
+
+}
+
+@media (max-width: 688px  ){
+
+    .card{
+        width: 500px;   
+        height: 600px;
+        margin-bottom: 50px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .top{
+        margin-top: 1rem;
+    }
+
+    .title{
+       font-size: 1.3rem;
+    }
+
+    .imgContainer{
+        width: 500px;
+        height: 340px;
+    }
+
+    .middle{
+        font-size: 0.8rem;
+    }
+
+    .btn{
+        height: 2.5rem;
+        width: 20rem;
+        margin-left: 50px;
+        
+    }
+
+}
+
+@media (max-width: 500px  ){
+
+    .card{
+        width: 400px;   
+        height: 600px;
+        margin-bottom: 50px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .top{
+        margin-top: 1rem;
+    }
+
+    .title{
+       font-size: 1.3rem;
+    }
+
+    .imgContainer{
+        width: 400px;
+        height: 340px;
+    }
+
+    .middle{
+        font-size: 0.8rem;
+    }
+
+    .btn{
+        height: 2.5rem;
+        width: 20rem;
+        margin-left: 10px;
+        
+    }
+
+}
+
+@media (max-width: 412px  ){
+
+    .card{
+        width: 350px;   
+        height: 600px;
+        margin-bottom: 50px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .top{
+        margin-top: 1rem;
+    }
+
+    .title{
+       font-size: 1.3rem;
+    }
+
+    .imgContainer{
+        width: 350px;
+        height: 340px;
+    }
+
+    .middle{
+        font-size: 0.8rem;
+    }
+
+    .btn{
+        height: 2.5rem;
+        width: 14rem;
+        margin-left: 30px;
+        
+    }
 
 }

@@ -18,7 +18,7 @@ const SearchFilter = () => {
           <option value={"6"}>📍París - FR </option>
           <option value={"7"}>📍Zúrich - SW</option>
         </select>
-        <DatePicker></DatePicker>
+        <DatePicker></DatePicker>        
         <button className={styles.btn}> Buscar</button>
       </section>
     </div>

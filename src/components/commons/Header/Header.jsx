@@ -22,7 +22,7 @@ const Header = () => {
     <div className={styles.container}>
         <section className={styles.left} >
           <Link to="/"><img className={styles.logo} src={logo} width='80px' height='60px' alt='logo' /></Link> 
-            <p className={styles.title}>Sentite como en casa</p>
+            <a href='/' className={styles.title}>Sentite como en casa</a>
         </section>
         {isLogged ? ( <section  className={styles.avatarContainer}><Avatar></Avatar></section>)  : 
         (

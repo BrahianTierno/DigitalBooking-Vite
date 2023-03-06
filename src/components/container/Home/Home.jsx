@@ -7,10 +7,9 @@ import RecomendatioContainer from '../RecomendatioContainer/RecomendatioContaine
 const Home = () => {
   return (
     <div>
-        <SearchFilter></SearchFilter>
-        <CategoryContainer></CategoryContainer>
-        <RecomendatioContainer></RecomendatioContainer>
-       
+        <SearchFilter />
+        <CategoryContainer />
+        <RecomendatioContainer />
     </div>
   )
 }

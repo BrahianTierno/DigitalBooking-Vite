@@ -28,7 +28,7 @@ const Avatar = () => {
                 <p className={styles.name}>{userData.name + " " + userData.lastName}</p>
             </section>
             <section>
-            <BiLogOut onClick={handlerLogOut} size="30px"  ></BiLogOut>
+            <i className={styles.logOut}><BiLogOut onClick={handlerLogOut} size="30px"  /></i>
             </section>           
         </div>
     )

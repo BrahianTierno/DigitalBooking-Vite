@@ -72,7 +72,7 @@ function Login() {
 
                     <button onSubmit={onSubmitLogin} type="submit" className={styles.btnForm} disabled={!isValid}>Ingresar</button>
                 </form>
-                <p className={styles.pLogin}>¿Aún no tienes cuenta?<Link to="/Registre"> Registrate</Link></p>
+                <p className={styles.pLogin}>¿Aún no tienes cuenta?<Link to="/Register"> Registrate</Link></p>
             </div>            
             )}
             </Formik>

@@ -1,21 +1,22 @@
 import React from 'react'
-import styles from ".//footer.module.css"
-import { BsFacebook, BsLinkedin, BsTwitter,BsInstagram} from "react-icons/bs";
+import { FaLinkedinIn } from 'react-icons/fa'
+import { BsFacebook, BsTwitter, BsInstagram } from 'react-icons/bs'
+import styles from './/footer.module.css';
 
 const Footer = () => {
-  return (
-    <div className={styles.container}>
-        <section>
-            <p>©2021 Digital Booking</p>
-        </section>
-        <section className={styles.logos}>
-            <BsFacebook></BsFacebook>
-            <BsLinkedin></BsLinkedin>
-            <BsTwitter></BsTwitter>
-            <BsInstagram></BsInstagram>
-        </section>
-    </div>
-  )
+    return (
+        <footer className={styles.container}>
+            <p className={styles.pFooter}>©2023 Digital Booking</p>
+            <div className={styles.listFooter}>
+                <ul >
+                    <li><a href="https://facebook.com"><BsFacebook /></a></li>
+                    <li><a href="https://linkedin.com"><FaLinkedinIn /></a></li>
+                    <li><a href="https://twitter.com"><BsTwitter /></a></li>
+                    <li><a href="https://instagram.com"><BsInstagram /></a></li>
+                </ul>
+            </div>
+        </footer>
+    )
 }
 
 export default Footer

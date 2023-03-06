@@ -12,10 +12,10 @@ const MenuMobile = () => {
 
         </section>
         <section>
-            <BsFacebook></BsFacebook>
-            <BsLinkedin></BsLinkedin>
-            <BsLinkedin></BsLinkedin>
-            <BsInstagram></BsInstagram>
+            <BsFacebook />
+            <BsTwitter />
+            <BsLinkedin />
+            <BsInstagram />
         </section>
     </div>
   )

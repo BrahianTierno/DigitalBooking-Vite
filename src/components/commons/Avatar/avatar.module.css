@@ -16,3 +16,8 @@
 .name{
     color: #1DBEB4;  
 }
+
+.logOut:hover{
+    color: #9b9fc9;
+    cursor: pointer;
+}

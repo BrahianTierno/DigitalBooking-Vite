@@ -1,10 +1,10 @@
-.card{
-    display: flex;    
+.card {
+    display: flex;
     justify-content: space-between;
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     transition: 0.3s;
     border-radius: 10px;
-    width: 670px;   
+    width: 670px;
     height: 320px;
     margin-right: 0rem;
     margin-bottom: 1rem;
@@ -15,33 +15,33 @@
 }
 
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
 
 
-.rigth{
+.rigth {
     margin-left: 1rem;
 }
 
-.top{
-    display: flex;      
-    justify-content: space-between;    
+.top {
+    display: flex;
+    justify-content: space-between;
     margin-top: 2rem;
-    margin-bottom: 20px;    
+    margin-bottom: 20px;
 }
 
-.topRigth{    
+.topRigth {
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
     margin-right: 1rem;
 }
 
-.topLeft{    
+.topLeft {
     display: flex;
     flex-direction: column;
 }
 
-.review{
+.review {
     float: right;
     font-size: 0.9rem;
     color: #383B58;
@@ -52,41 +52,41 @@
 
 
 
-.calification{
-   float: right;  
-   font-size: 1rem;
-   color: white;
-   background-color: #383B58;
-   margin-left: 2rem;   
-   text-align: center;
-   border-radius: 10px;
+.calification {
+    float: right;
+    font-size: 1rem;
+    color: white;
+    background-color: #383B58;
+    margin-left: 2rem;
+    text-align: center;
+    border-radius: 10px;
 }
 
-.title{
+.title {
     color: #383B58;
-    font-size: 1.5rem;  
-  }
+    font-size: 1.5rem;
+}
 
-  .middle{
+.middle {
     color: #383B58;
     font-weight: bold;
-  }
+}
 
-  .imgContainer{
-    width:700px;
+.imgContainer {
+    width: 700px;
     height: 320px;
-  }
+}
 
-.img{
+.img {
     border-radius: 10px;
 }
 
 .a {
     color: #1DBEB4;
     cursor: pointer;
-  }
+}
 
-.btn{
+.btn {
     color: white;
     font-weight: bold;
     background-color: #1DBEB4;
@@ -99,300 +99,308 @@
     align-items: center;
 }
 
+.btn:hover{
+    background-color: #78dfd4;
+    transform: scale(1.1);
+}
 
 
 
-@media (max-width: 1406px  ){
 
-    .card{
-        width: 649px;   
+@media (max-width: 1406px) {
+
+    .card {
+        width: 649px;
         height: 320px;
         margin-bottom: 50px;
     }
 
-    .title{
-       font-size: 1rem;
+    .title {
+        font-size: 1rem;
     }
 
-    .middle{
+    .middle {
         font-size: 0.85rem;
     }
 
-    .btn{
+    .btn {
         height: 2.5rem;
         width: 15rem;
     }
 
 }
 
-@media (max-width: 1362px  ){
+@media (max-width: 1362px) {
 
-    .card{
-        width: 630px;   
+    .card {
+        width: 630px;
         height: 300px;
         margin-bottom: 50px;
     }
 
-    .imgContainer{
-        width:650px;
+    .imgContainer {
+        width: 650px;
         height: 320px;
-      }
-
-    .title{
-       font-size: 1rem;
     }
 
-    .middle{
+    .title {
+        font-size: 1rem;
+    }
+
+    .middle {
         font-size: 0.8rem;
     }
 
-    .btn{
+    .btn {
         height: 2.5rem;
         width: 15rem;
     }
 
 }
 
-@media (max-width: 1324px  ){
+@media (max-width: 1324px) {
 
-    .card{
-        width: 600px;   
+    .card {
+        width: 600px;
         height: 320px;
         margin-bottom: 50px;
     }
 
-    .title{
-       font-size: 1rem;
+    .title {
+        font-size: 1rem;
     }
 
-    .middle{
+    .middle {
         font-size: 0.8rem;
     }
 
-    .btn{
+    .btn {
         height: 2.5rem;
         width: 14rem;
     }
 
 }
 
-@media (max-width: 1262px  ){
+@media (max-width: 1262px) {
 
-    .card{
-        width: 580px;   
+    .card {
+        width: 580px;
         height: 300px;
         margin-bottom: 50px;
     }
 
-    .imgContainer{
-        width:650px;
+    .imgContainer {
+        width: 650px;
         height: 300px;
-      }
-      .top{      
-        margin-top: 1rem;   
-        margin-bottom: 1rem;       
     }
 
-    .title{
-       font-size: 1rem;
+    .top {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
-    .middle{
+    .title {
+        font-size: 1rem;
+    }
+
+    .middle {
         font-size: 0.75rem;
     }
 
-    .btn{
+    .btn {
         height: 2.3rem;
         width: 14rem;
     }
 
 }
 
-@media (max-width: 1224px  ){
+@media (max-width: 1224px) {
 
-    .card{
-        width: 560px;   
+    .card {
+        width: 560px;
         height: 280px;
         margin-bottom: 50px;
     }
 
-    .imgContainer{
-        width:650px;
+    .imgContainer {
+        width: 650px;
         height: 280px;
-      }
-      .top{      
-        margin-top: 0.5rem;   
-        margin-bottom: 0.5rem;     
     }
 
-    .title{
-       font-size: 1rem;
+    .top {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
     }
 
-    .middle{
+    .title {
+        font-size: 1rem;
+    }
+
+    .middle {
         font-size: 0.75rem;
     }
 
-    .btn{
+    .btn {
         height: 2.3rem;
         width: 14rem;
     }
 
 }
 
-@media (max-width: 1180px  ){
+@media (max-width: 1180px) {
 
-    .card{
-        width: 680px;   
+    .card {
+        width: 680px;
         height: 280px;
         margin-bottom: 50px;
     }
 
-    .imgContainer{
-        width:650px;
+    .imgContainer {
+        width: 650px;
         height: 280px;
-      }
-      .top{      
-        margin-top: 1rem;   
-        margin-bottom: 1rem;     
     }
 
-    
+    .top {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
 
-    .btn{
+
+
+    .btn {
         height: 2.3rem;
         width: 16rem;
     }
 
 }
 
-@media (max-width: 720px  ){
+@media (max-width: 720px) {
 
-    .card{
-        width: 649px;   
+    .card {
+        width: 649px;
         height: 290px;
         margin-bottom: 50px;
     }
 
-    .title{
+    .title {
         font-size: 1.4rem;
-     }
- 
-     .middle{
-         font-size: 0.85rem;
-     }
+    }
 
-    .btn{
+    .middle {
+        font-size: 0.85rem;
+    }
+
+    .btn {
         height: 2.5rem;
         width: 15rem;
     }
 
 }
 
-@media (max-width: 688px  ){
+@media (max-width: 688px) {
 
-    .card{
-        width: 500px;   
+    .card {
+        width: 500px;
         height: 600px;
         margin-bottom: 50px;
         flex-direction: column;
         justify-content: center;
     }
 
-    .top{
+    .top {
         margin-top: 1rem;
     }
 
-    .title{
-       font-size: 1.3rem;
+    .title {
+        font-size: 1.3rem;
     }
 
-    .imgContainer{
+    .imgContainer {
         width: 500px;
         height: 340px;
     }
 
-    .middle{
+    .middle {
         font-size: 0.8rem;
     }
 
-    .btn{
+    .btn {
         height: 2.5rem;
         width: 20rem;
         margin-left: 50px;
-        
+
     }
 
 }
 
-@media (max-width: 500px  ){
+@media (max-width: 500px) {
 
-    .card{
-        width: 400px;   
+    .card {
+        width: 400px;
         height: 600px;
         margin-bottom: 50px;
         flex-direction: column;
         justify-content: center;
     }
 
-    .top{
+    .top {
         margin-top: 1rem;
     }
 
-    .title{
-       font-size: 1.3rem;
+    .title {
+        font-size: 1.3rem;
     }
 
-    .imgContainer{
+    .imgContainer {
         width: 400px;
         height: 340px;
     }
 
-    .middle{
+    .middle {
         font-size: 0.8rem;
     }
 
-    .btn{
+    .btn {
         height: 2.5rem;
         width: 20rem;
         margin-left: 10px;
-        
+
     }
 
 }
 
-@media (max-width: 412px  ){
+@media (max-width: 412px) {
 
-    .card{
-        width: 350px;   
+    .card {
+        width: 350px;
         height: 600px;
         margin-bottom: 50px;
         flex-direction: column;
         justify-content: center;
     }
 
-    .top{
+    .top {
         margin-top: 1rem;
     }
 
-    .title{
-       font-size: 1.3rem;
+    .title {
+        font-size: 1.3rem;
     }
 
-    .imgContainer{
+    .imgContainer {
         width: 350px;
         height: 340px;
     }
 
-    .middle{
+    .middle {
         font-size: 0.8rem;
     }
 
-    .btn{
+    .btn {
         height: 2.5rem;
         width: 14rem;
         margin-left: 30px;
-        
+
     }
 
 }

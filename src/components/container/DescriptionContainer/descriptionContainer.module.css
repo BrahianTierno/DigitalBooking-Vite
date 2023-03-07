@@ -1,0 +1,181 @@
+.titleDesc{
+    display: flex;
+    background-color: #545776;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titleDesc h6{
+    color: #F3F1ED;
+}
+
+.titleDesc a{
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+}
+
+.divDesc{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: #383B58;
+    background-color: #e2e2e2;
+    height: 5rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.divDesc p{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.divDesc span{
+    background-color: #545776;
+    color: white;
+    border-radius: 35%;
+    padding: 5px 10px;
+    font-weight: 500;
+}
+
+.stars{
+    color: #1DBEB4;
+    font-size: 1rem;
+}
+
+.likeAndShare{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 0.5rem;
+}
+
+.likeAndShare i:hover{
+    cursor: pointer;
+    color: #a0a0a0;
+}
+
+.images{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.services p{
+    font-size: 14.5px;
+    font-weight: 400;
+}
+
+h4{
+    color: #545776;
+}
+
+hr{
+    border: solid 0.2px;
+    color: #1DBEB4;
+}
+
+.dateDisponible{
+    background-color: gainsboro;
+    height: 30rem;
+}
+
+.iconList ul{
+    font-size: 1rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.icons{
+    font-size: 1.3rem;
+    color: #1DBEB4;
+}
+
+.mapaContainer{
+    height: 30rem;
+    width: 100%;
+    display: flex;
+}
+
+.mapa{
+    position: relative;
+    width: 50%;
+    height: 50%;
+    cursor: grab;
+}
+
+.mapa:active{
+    cursor: grabbing;
+}
+
+.titleNormas{
+    color: #545776;
+    font-size: medium;
+    font-weight: 600;
+}
+
+.listNormas h5{
+    color: #545776;
+    font-size: 1.5rem;
+}
+
+.listNormas ul li{
+    text-decoration: none;
+    list-style: none;
+}
+
+
+.listas{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem;
+    justify-items: stretch;
+}
+
+@media screen and (max-width: 800px){
+    .images{
+        display: none;
+    }
+
+    /**Arreglar p que dice donde queda (casi header)**/
+
+    /*? Arreglar estrellas ?*/
+}
+
+@media screen and (max-width: 640px){
+
+    .divDesc{
+        display: flex;
+        align-self: center;
+        justify-content: center;
+    }
+
+    .divDesc p{
+        font-size: small;
+    }
+
+    .puntaje{
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+}
+
+@media screen and (max-width: 550px) {
+    .listas{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

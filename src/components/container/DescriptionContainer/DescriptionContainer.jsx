@@ -11,6 +11,7 @@ import StandardImageList from '../../pure/ListImages/ListImages'
 import styles from './descriptionContainer.module.css'
 import Carrusel from '../../utils/Carrusel/Carrusel'
 import LikeButton from '../../utils/LikeButton'
+import Calendar from '../../pure/Calendar/Calendar'
 
 const DescriptionContainer = () => {
 
@@ -63,11 +64,11 @@ const DescriptionContainer = () => {
                     horizontal: 'left',
                     }}
                 >
-                <MenuItem onClick={handleClose}><a href='/description' style={{textDecoration: "none", color: "black"}}>Copiar enlace <BsPaperclip style={{color:"grey"}}/></a></MenuItem>
-                <MenuItem onClick={handleClose}><a  href="https://whatsapp.com" style={{textDecoration: "none", color: "black"}}>Compartir <BsWhatsapp style={{color:"green"}}/></a></MenuItem>
-                <MenuItem onClick={handleClose}><a  href="https://instagram.com" style={{textDecoration: "none", color: "black"}}>Compartir <BsInstagram style={{color:"orange"}}/></a></MenuItem>
-            </Menu>
-                    <i><LikeButton /></i>
+                    <MenuItem onClick={handleClose}><a href='/description' style={{textDecoration: "none", color: "black"}}>Copiar enlace <BsPaperclip style={{color:"grey"}}/></a></MenuItem>
+                    <MenuItem onClick={handleClose}><a  href="https://whatsapp.com" style={{textDecoration: "none", color: "black"}}>Compartir <BsWhatsapp style={{color:"green"}}/></a></MenuItem>
+                    <MenuItem onClick={handleClose}><a  href="https://instagram.com" style={{textDecoration: "none", color: "black"}}>Compartir <BsInstagram style={{color:"orange"}}/></a></MenuItem>
+                </Menu>
+                <i style={{fontSize: "1.5rem"}}><LikeButton /></i>
                 </div>
                 <div className={styles.images}>
                     <StandardImageList />
@@ -107,9 +108,15 @@ const DescriptionContainer = () => {
                         <li><MdPets className={styles.icons}/> Apto mascotas</li>
                     </ul>
                 </div>
+                <br />
             </section>
             <section className={styles.dateDisponible}>
                 <h4>Fechas disponibles</h4>
+                <Calendar />
+                <div className={styles.divCalendar}>
+                    <p className={styles.textCalendar}>Agregá tus fechas de viaje para obtener precios exactos</p>
+                    <button className={styles.btnCalendar}>Iniciar reserva</button>
+                </div>
             </section>
             <br />
             <section className={styles.mapaContainer}>

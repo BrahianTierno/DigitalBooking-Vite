@@ -7,3 +7,9 @@
         display: flex;
     }
 }
+
+@media screen and (max-width: 550px) {
+    .carrusel{
+        width: 100%;
+    }
+}

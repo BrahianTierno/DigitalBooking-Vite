@@ -14,32 +14,32 @@
 
     {
         "id": 2,
-        "img": "../img/depart-room.jpg",
-        "title": "Hermitage Hotel",
+        "img": "../img/room-bab.jpg",
+        "title": "Vacker-Utsikt B&B",
         "number": 8,
         "review": "Muy bueno",
         "distance": "A 940 m del centro",
         "description": "En el corazón de San Telmo, disfruta de un albergue inspirado en las pasiones de Buenos Aires.",
         "stars": 5,
-        "category":"Hotel"
+        "category":"Bed and Breakfast"
     },
 
     {
         "id": 3,
         "img": "../img/dormitorio-hotel.jpg",
-        "title": "Hermitage Hotel",
+        "title": "Aloha Hostel",
         "number": 8,
         "review": "Muy bueno",
         "distance": "A 940 m del centro",
         "description": "En el corazón de San Telmo, disfruta de un albergue inspirado en las pasiones de Buenos Aires.",
         "stars": 5,
-        "category":"Hotel"
+        "category":"Hostel"
     },
 
     {
         "id": 4,
-        "img": "../img/depart-room.jpg",
-        "title": "Hermitage Hotel",
+        "img": "../img/hotel.jpg",
+        "title": "Concordia Hotel",
         "number": "8",
         "review": "Muy bueno",
         "distance": "A 940 m del centro",
@@ -50,26 +50,26 @@
 
     {
         "id": 5,
-        "img": "../img/hotel-room.jpg",
-        "title": "Hermitage Hotel",
+        "img": "../img/b&b.jpg",
+        "title": "Boas Praias B&B",
         "number": "8",
         "review": "Muy bueno",
         "distance": "A 940 m del centro",
         "description": "En el corazón de San Telmo, disfruta de un albergue inspirado en las pasiones de Buenos Aires.",
         "stars": 5,
-        "category":"Hotel"
+        "category":"Bed and Breakfast"
         
     },
 
     {
         "id": 6,
         "img": "../img/depart-room.jpg",
-        "title": "Hermitage Hotel",
+        "title": "La tour",
         "number": 8,
         "review": "Muy bueno",
         "distance": "A 940 m del centro",
         "description": "En el corazón de San Telmo, disfruta de un albergue inspirado en las pasiones de Buenos Aires.",
         "stars": 5,
-        "category":"Hotel"
+        "category":"Departamento"
     }
 ]

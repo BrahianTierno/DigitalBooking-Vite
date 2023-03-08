@@ -4,14 +4,14 @@
     {
         "id": 1,
         "img": "img/img-hotel.jpg",
-        "title": "Hotel",
+        "title": "Hoteles",
         "number": "807.254 hoteles"
     },
 
     {
         "id": 2,
         "img": "img/img-hosteles.jpg",
-        "title": "Hosteles",
+        "title": "Hostels",
         "number": "105.453 hosteles"
     },
 

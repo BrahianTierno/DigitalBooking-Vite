@@ -1,8 +1,8 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { MdOutlineArrowBackIos, MdStarOutline, MdStar, MdOutlineCountertops, MdOutlineDirectionsCar, MdPets, MdLocationOn} from 'react-icons/md'
+import React, { useEffect, useState, useContext} from 'react'
+import { Link, useParams } from 'react-router-dom'
+import { MdOutlineArrowBackIos, MdStarOutline, MdStar, MdOutlineCountertops, MdOutlineDirectionsCar, MdPets, MdLocationOn } from 'react-icons/md'
 import { AiOutlineShareAlt } from 'react-icons/ai'
-import { FaSwimmer, FaRegSnowflake, FaWifi} from 'react-icons/fa'
+import { FaSwimmer, FaRegSnowflake, FaWifi } from 'react-icons/fa'
 import { BsWhatsapp, BsInstagram, BsPaperclip } from 'react-icons/bs'
 import { CgScreen } from 'react-icons/cg'
 import { Menu, MenuItem } from '@mui/material'
@@ -11,8 +11,19 @@ import StandardImageList from '../../pure/ListImages/ListImages'
 import styles from './descriptionContainer.module.css'
 import Carrusel from '../../utils/Carrusel/Carrusel'
 import LikeButton from '../../utils/LikeButton'
+import data from '../../../staticData/hoteles.json'
+import axios from 'axios';
+import { ProductContex } from '../../../context/ProductContex'
 
 const DescriptionContainer = () => {
+
+    let { id } = useParams();  
+
+    const {description,selectedData} =  useContext(ProductContex); 
+       
+    useEffect(() => {        
+        description(id)  
+    }, [])
 
     const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -31,14 +42,14 @@ const DescriptionContainer = () => {
         <>
             <section className={styles.top}>
                 <div className={styles.titleDesc}>
-                    <h6>TIPO</h6>
-                    <h1>Nombre</h1>
+                    {/* <h6>{selectedData.categoria.titulo}</h6> */}
+                    <h1>{selectedData.nombre}</h1>
                     <Link to="/home"><MdOutlineArrowBackIos /></Link>
                 </div>
                 <div className={styles.divDesc}>
-                    <p className={styles.ubication}><MdLocationOn /> Ciudad en la que se encuentra el alojamiento, País, a 00m del centro</p>
+                    {/* <p className={styles.ubication}><MdLocationOn /> {selectedData.ciudad.nombre}, País, a 00m del centro</p> */}
                     <div className={styles.puntaje}>
-                        <p>Muy bueno<span>8</span></p>
+                        <p>{selectedData.valoracion}<span>{selectedData.calificacion}</span></p>
                         <div className={styles.stars}>
                             <MdStar /><MdStar /><MdStar /><MdStar /><MdStarOutline />
                         </div>
@@ -47,30 +58,30 @@ const DescriptionContainer = () => {
             </section>
             <section>
                 <div className={styles.likeAndShare}>
-                <i onClick={handleClick}><AiOutlineShareAlt /></i>
-                <Menu
-                    id="demo-positioned-menu"
-                    aria-labelledby="demo-positioned-button"
-                    anchorEl={anchorEl}
-                    open={open}
-                    onClose={handleClose}
-                    anchorOrigin={{
-                    vertical: 'top',
-                    horizontal: 'left',
-                    }}
-                    transformOrigin={{
-                    vertical: 'top',
-                    horizontal: 'left',
-                    }}
-                >
-                <MenuItem onClick={handleClose}><a href='/description' style={{textDecoration: "none", color: "black"}}>Copiar enlace <BsPaperclip style={{color:"grey"}}/></a></MenuItem>
-                <MenuItem onClick={handleClose}><a  href="https://whatsapp.com" style={{textDecoration: "none", color: "black"}}>Compartir <BsWhatsapp style={{color:"green"}}/></a></MenuItem>
-                <MenuItem onClick={handleClose}><a  href="https://instagram.com" style={{textDecoration: "none", color: "black"}}>Compartir <BsInstagram style={{color:"orange"}}/></a></MenuItem>
-            </Menu>
+                    <i onClick={handleClick}><AiOutlineShareAlt /></i>
+                    <Menu
+                        id="demo-positioned-menu"
+                        aria-labelledby="demo-positioned-button"
+                        anchorEl={anchorEl}
+                        open={open}
+                        onClose={handleClose}
+                        anchorOrigin={{
+                            vertical: 'top',
+                            horizontal: 'left',
+                        }}
+                        transformOrigin={{
+                            vertical: 'top',
+                            horizontal: 'left',
+                        }}
+                    >
+                        <MenuItem onClick={handleClose}><a href='/description' style={{ textDecoration: "none", color: "black" }}>Copiar enlace <BsPaperclip style={{ color: "grey" }} /></a></MenuItem>
+                        <MenuItem onClick={handleClose}><a href="https://whatsapp.com" style={{ textDecoration: "none", color: "black" }}>Compartir <BsWhatsapp style={{ color: "green" }} /></a></MenuItem>
+                        <MenuItem onClick={handleClose}><a href="https://instagram.com" style={{ textDecoration: "none", color: "black" }}>Compartir <BsInstagram style={{ color: "orange" }} /></a></MenuItem>
+                    </Menu>
                     <i><LikeButton /></i>
                 </div>
                 <div className={styles.images}>
-                    <StandardImageList />
+                    <StandardImageList img={selectedData.imagenes} />
                 </div>
                 <Carrusel />
             </section>
@@ -79,7 +90,7 @@ const DescriptionContainer = () => {
                 <h4>Alojate en el corazón de "{"La ciudad"}"</h4>
                 <br />
                 <p>
-                    Está situado a solo unas calles de la avenida Alvear, de la avenida Quintana, del parque San Martín y del distrito de Recoleta. En las inmediaciones también hay varios lugares de interés, como la calle Florida, el centro comercial Galerías Pacífico, la zona de Puerto Madero, la plaza de Mayo y el palacio Municipal.
+                    {selectedData.description}
                 </p>
                 <br />
                 <p>
@@ -98,13 +109,13 @@ const DescriptionContainer = () => {
                 <hr />
                 <div className={styles.iconList}>
                     <ul className={styles.iconServices}>
-                        <li><MdOutlineCountertops className={styles.icons}/> Cocina</li>
-                        <li><MdOutlineDirectionsCar className={styles.icons}/> Estacionamiento</li>
-                        <li><CgScreen className={styles.icons}/> Televisor</li>
-                        <li><FaSwimmer className={styles.icons}/> Piscina</li>
-                        <li><FaRegSnowflake className={styles.icons}/> Aire acondicionado</li>
-                        <li><FaWifi className={styles.icons}/> Wifi</li>
-                        <li><MdPets className={styles.icons}/> Apto mascotas</li>
+                        <li><MdOutlineCountertops className={styles.icons} /> Cocina</li>
+                        <li><MdOutlineDirectionsCar className={styles.icons} /> Estacionamiento</li>
+                        <li><CgScreen className={styles.icons} /> Televisor</li>
+                        <li><FaSwimmer className={styles.icons} /> Piscina</li>
+                        <li><FaRegSnowflake className={styles.icons} /> Aire acondicionado</li>
+                        <li><FaWifi className={styles.icons} /> Wifi</li>
+                        <li><MdPets className={styles.icons} /> Apto mascotas</li>
                     </ul>
                 </div>
             </section>
@@ -142,8 +153,7 @@ const DescriptionContainer = () => {
                     </ul>
                 </div>
             </section>
-        </>
-    )
+        </> )
 }
 
 export default DescriptionContainer

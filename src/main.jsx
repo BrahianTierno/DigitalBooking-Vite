@@ -8,10 +8,12 @@ import DescriptionContainer from './components/container/DescriptionContainer/De
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css'
 import AuthContexProvider from './context/AuthContex'
+import ProductContexProvider from './context/ProductContex'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+ 
   <AuthContexProvider>
+  <ProductContexProvider>
     <BrowserRouter>
       <Routes>
         <Route element={<App />}>
@@ -19,10 +21,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route index path='/Home' element={<Home/>} />
             <Route path="/Login" element={<Login/>} />
             <Route path="/Register" element={<Register/>} />  
-            <Route path="/description" element={<DescriptionContainer />} />     
+            <Route path="/description/:id" element={<DescriptionContainer />} />     
         </Route>
       </Routes>
     </BrowserRouter>
+    </ProductContexProvider>
   </AuthContexProvider>  
-  </React.StrictMode>
+  
 )

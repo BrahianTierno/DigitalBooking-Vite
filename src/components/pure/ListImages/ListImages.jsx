@@ -1,6 +1,11 @@
-import * as React from 'react';
+import  React,{useContext} from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import  { ProductContex } from '../../../context/ProductContex';
+
+
+
+
 
 const itemData = [
     {
@@ -29,7 +34,8 @@ const itemData = [
     },
 ];
 
-export default function StandardImageList() {
+export default function StandardImageList({img}) {   
+
     return (
         <ImageList sx={{ width: 1200, height: "auto"}} cols={3} gap={10}>
             {itemData.map((item) => (

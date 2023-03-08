@@ -5,10 +5,10 @@ import RecomendatioContainer from '../RecomendatioContainer/RecomendatioContaine
 
 const Home = () => {
   return (
-    <div>
+    <div>    
         <SearchFilter />
         <CategoryContainer />
-        <RecomendatioContainer />
+        <RecomendatioContainer/>
     </div>
   )
 }

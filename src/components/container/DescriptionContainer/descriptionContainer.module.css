@@ -128,18 +128,21 @@ hr{
 }
 
 .iconList ul{
-    font-size: 1rem;
     list-style: none;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    font-size: 1rem;
+    height: max-content;
+    justify-items: stretch;
+    justify-content: space-around;
+    align-content: space-around;
     flex-direction: row;
 }
 
 .icons{
     font-size: 1.3rem;
-    color: #1DBEB4;
+    color: #1DBEB4;   
 }
 
 .mapaContainer{

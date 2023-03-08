@@ -5,7 +5,6 @@ import axios from 'axios';
 export const ProductContex = createContext()
 
 
-
 const ProductContexProvider = ({children}) => {
 
 //Todos los producto
@@ -41,19 +40,45 @@ useEffect(() => {
       // handle error
       console.log(error);
     });  
+   }
+
+
+   const filterByCategoria = (name) => {
+
+    let idCategoria
+
+    switch (name) {
+      case "Hoteles":
+        idCategoria = 1
+        break;
+      case "Hostels":
+        idCategoria = 2
+        break;
+      case "Departamentos":
+        idCategoria = 3
+        break;
+      case "Bed & Breakfast":
+        idCategoria = 4
+        break;      
     }
 
-    
+    axios.get(`http://localhost:8080/productos?categoria=${idCategoria}`)
+      .then(function (response) {
+        setProducts(response.data)
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      });
+  }
   
-
-
- 
 
 const data = {
    products,
    setProducts,
    description,
-   selectedData
+   selectedData,
+   filterByCategoria
 }
 
 

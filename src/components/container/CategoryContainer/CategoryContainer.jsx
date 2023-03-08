@@ -12,10 +12,8 @@ const CategoryContainer = () => {
 
   useEffect(() => {
     
-    const url = "http://localhost:8080/categorias"
-  
-    //const url = "http://18.117.8.179/categorias"
-  
+    const url = "http://localhost:8080/categorias"  
+    //const url = "http://18.117.8.179/categorias"  
     axios.get(url)
     .then(function (response) {
       setDataCategoria(response.data)

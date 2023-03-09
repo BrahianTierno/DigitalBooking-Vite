@@ -11,8 +11,6 @@ import StandardImageList from '../../pure/ListImages/ListImages'
 import styles from './descriptionContainer.module.css'
 import Carrusel from '../../utils/Carrusel/Carrusel'
 import LikeButton from '../../utils/LikeButton'
-import Calendar from '../../pure/Calendar/Calendar'
-
 import { ProductContex } from '../../../context/ProductContex'
 import Caracteristicas from '../../pure/Caracteristicas/Caracteristicas'
 import Politics from '../../pure/Politics/Politics.jsx'

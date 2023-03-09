@@ -11,7 +11,7 @@ const RecomendationCard = ({id , img, category, title, calification, review, dir
   return (
     <div className={styles.card}>        
          <div  className={styles.left}> 
-         <img className={styles.img} src={img[0].urlImagen} width="100%" height="100%" alt="imagen"/>    
+         <img className={styles.img} src={img[0]?.urlImagen} width="100%" height="100%" alt="imagen"/>    
         </div>
         <div className={styles.rigth}>
             <section className={styles.rigth} >

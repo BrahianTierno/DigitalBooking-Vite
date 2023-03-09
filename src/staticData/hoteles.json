@@ -3,7 +3,7 @@
         "id": "1",
         "img": "../img/hotel-room.jpg",
         "title": "Hermitage Hotel",
-        "number": "8",
+        "number": 8,
         "review": "Muy bueno",
         "distance": "A 940 m del centro",
         "description": "En el corazón de San Telmo, disfruta de un albergue inspirado en las pasiones de Buenos Aires.",
@@ -15,7 +15,7 @@
     {
         "id": "2",
         "img": "../img/room-bab.jpg",
-        "title": "Vacker-Utsikt B&B",
+        "title": "The Dolder Grand",
         "number": 8,
         "review": "Muy bueno",
         "distance": "A 940 m del centro",
@@ -51,8 +51,8 @@
     {
         "id": "5",
         "img": "../img/b&b.jpg",
-        "title": "Boas Praias B&B",
-        "number": "8",
+        "title": "Hilton Rio de Janeiro Copacabana",
+        "number": 8,
         "review": "Muy bueno",
         "distance": "A 940 m del centro",
         "description": "En el corazón de San Telmo, disfruta de un albergue inspirado en las pasiones de Buenos Aires.",

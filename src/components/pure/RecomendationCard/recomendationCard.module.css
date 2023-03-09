@@ -1,11 +1,12 @@
 .card {
     display: flex;
     justify-content: space-between;
+    object-fit: cover;
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     transition: 0.3s;
     border-radius: 10px;
-    width: 670px;
-    height: 320px;
+    width: 725px;
+    height: 330px;
     margin-right: 0rem;
     margin-bottom: 1rem;
     margin-left: 0.5rem;
@@ -20,6 +21,8 @@
 
 .rigth {
     margin-left: 1rem;
+    width: 400px;
+   
 }
 
 .top {
@@ -32,7 +35,7 @@
 .topRigth {
     display: flex;
     flex-direction: column;
-    margin-right: 1rem;
+    margin-right: 30px;
 }
 
 .topLeft {
@@ -44,9 +47,8 @@
     float: right;
     font-size: 0.9rem;
     color: #383B58;
-    font-weight: bolder;
-    margin-left: 0.5rem;
-    margin-top: 0.2rem;
+    font-weight: bolder;   
+    
 }
 
 
@@ -55,10 +57,10 @@
     float: right;
     font-size: 1rem;
     color: white;
-    background-color: #383B58;
-    margin-left: 2rem;
+    background-color: #383B58;    
     text-align: center;
     border-radius: 10px;
+    width: 50px;
 }
 
 .title {
@@ -71,9 +73,10 @@
     font-weight: bold;
 }
 
-.imgContainer {
+.left {
     width: 700px;
     height: 320px;
+    object-fit: cover;
 }
 
 .img {

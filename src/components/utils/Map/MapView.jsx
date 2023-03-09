@@ -3,7 +3,12 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import  { LocationIcon } from './LocationIcon.jsx'
 import 'leaflet/dist/leaflet.css'
 
-const MapView = () => {
+const MapView = (latitud, longitud) => {
+
+    console.log(longitud);
+    
+
+
     return (
             <MapContainer center={[-38.00776240463958, -57.540148221307675]} zoom={13}>
                 <TileLayer 

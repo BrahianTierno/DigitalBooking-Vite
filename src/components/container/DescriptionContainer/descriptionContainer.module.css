@@ -69,9 +69,14 @@
     align-items: center;
 }
 
+.services{
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
 .services p{
     font-size: 14.5px;
-    font-weight: 400;
+    font-weight: 400;    
 }
 
 h4{
@@ -129,6 +134,7 @@ hr{
 .listNormas h5{
     color: #545776;
     font-size: 1.5rem;
+    
 }
 
 .listNormas ul li{

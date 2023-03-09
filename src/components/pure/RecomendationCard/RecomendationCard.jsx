@@ -10,7 +10,7 @@ const RecomendationCard = ({id , img, category, title, calification, review, dir
 
   return (
     <div className={styles.card}>        
-         <div  className={styles.imgContainer}> 
+         <div  className={styles.left}> 
          <img className={styles.img} src={img[0].urlImagen} width="100%" height="100%" alt="imagen"/>    
         </div>
         <div className={styles.rigth}>
@@ -27,7 +27,7 @@ const RecomendationCard = ({id , img, category, title, calification, review, dir
                 </section>
                 <section className={styles.middle}>
                     { <p><span><FaMapMarkerAlt fontSize={'20px'}/></span>{direction} <a href='/description' className={styles.a}>MOSTAR EN EL MAPA</a></p> }
-                    <p>{desciption} <a href='/description' className={styles.a}>mas</a></p>                    
+                    <p>{desciption.slice(0, 130)} <a href='/description' className={styles.a}>mas</a></p>                    
                 </section>
                     <BiSwim fontSize={'30px'}/>
                     <BiWifi fontSize={'30px'}/>

@@ -47,7 +47,7 @@ const DescriptionContainer = () => {
         {
             selectedData && (
                 <div>
-                 <section className={styles.top}>
+                 <section className={styles.top}>                 
                 <div className={styles.titleDesc}>
                      <h6>{selectedData.categoria?.titulo}</h6>
                     <h1>{selectedData.nombre}</h1>
@@ -90,7 +90,7 @@ const DescriptionContainer = () => {
                 <div className={styles.images}>
                     <StandardImageList img={selectedData.imagenes} />
                 </div>
-                <Carrusel />
+                <Carrusel img={selectedData.imagenes} />
             </section>
             <br />
             <section className={styles.services}>

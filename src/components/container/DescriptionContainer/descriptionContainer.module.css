@@ -1,3 +1,4 @@
+
 .titleDesc{
     display: flex;
     background-color: #545776;
@@ -142,6 +143,125 @@ hr{
     padding: 1rem;
     justify-items: stretch;
 }
+
+
+/** Revisar**/
+
+.dateDisponible{
+    display: flex;
+    justify-content: space-between;
+    background-color: gainsboro;
+    height: 33rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.divCalendar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    height: 30%;
+    width: 30%;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgb(0.5 0 0 / 25%);
+    border-radius: 3%;
+}
+
+.textCalendar{
+    text-align: center;
+}
+
+.btnCalendar{
+    font-size: 1.3rem;
+    width: 10rem;
+    height: 3.5rem;
+    background-color: rgb(75, 212, 194);
+    border: turquoise;
+    border-radius: 10px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+}
+
+.btnCalendar:hover{
+    background-color: rgb(63, 226, 215);
+}
+
+@media screen and (max-width: 960px) {
+    .dateDisponible{
+        display: flex;
+        padding-left: 1px;
+        height: 35rem;
+        flex-direction: row;
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .divCalendar{
+        position: relative;
+        height: 20%;
+        width: 100vw;
+        box-shadow: none;
+        margin-top: 1.5rem;
+    }
+}
+@media screen and (max-width: 678px){
+    .divCalendar{
+        background-color:gainsboro;
+        color: #383B58;
+        font-weight: 500;
+    }
+
+    .divCalendar p {
+        font-size: 1.5rem;
+    }
+
+    .btnCalendar{
+        margin-top: 10px;
+        width: 20rem;
+    }
+}
+@media screen and (max-width: 550px) {
+    .divCalendar{
+        margin-top: auto;
+    }
+
+    .btnCalendar{
+        margin-top: auto;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .dateDisponible{
+        display: flex;
+        padding-left: 1px;
+        height: 35rem;
+        flex-direction: row;
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .divCalendar{
+        position: relative;
+        height: 20%;
+        width: 100vw;
+        box-shadow: none;
+        margin-top: 1.5rem;
+    }
+}
+
+/****/
+
+
 
 @media screen and (max-width: 800px){
     .images{

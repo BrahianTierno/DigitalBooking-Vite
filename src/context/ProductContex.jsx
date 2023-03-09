@@ -5,64 +5,63 @@ import axios from 'axios';
 export const ProductContex = createContext()
 
 
-const ProductContexProvider = ({children}) => {
+const ProductContexProvider = ({ children }) => {
 
-//Todos los producto
-const [products, setProducts] = useState([])
+  //Todos los producto
+  const [products, setProducts] = useState([])
 
-//Producto selecionado
-const [selectedData, setSelectedData] = useState([])
+  //Producto selecionado
+  const [selectedData, setSelectedData] = useState([])
+
+  //Caracteristicas de producto seleccionado
+  const [caracteristicas, setCaracteristicas] = useState([]);
+
+  //Normas de producto seleccionado
+  const [rules, setRule] = useState([])
+
+  //Salud y seguridad
+  const [health, setHealth] = useState([]);
+
+  //Cncelaciones
+  const [cancellation, setCancellation] = useState([])
 
 
-useEffect(() => {
+  useEffect(() => {
 
-    const url = "http://localhost:8080/productos"  
+    const url = "http://18.117.8.179/productos"
     axios.get(url)
-    .then(function (response) {
-      setProducts(response.data)
-     
-    })
-    .catch(function (error) {
-      // handle error
-      console.log(error);
-    });     
+      .then(function (response) {
+        setProducts(response.data)
+
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      });
   }, [])
 
-  
+
   //Funcion para la descripcion
-  const description = (id) =>{
+  const description = (id) => {
 
-    axios.get(`http://localhost:8080/productos/${id}`)
-    .then(function (response) {      
-      setSelectedData(response.data)
-    })
-    .catch(function (error) {
-      // handle error
-      console.log(error);
-    });  
-   }
+    axios.get(`http://18.117.8.179/productos/${id}`)
+      .then(function (response) {
+        setSelectedData(response.data)
+        setCaracteristicas(response.data.caracteristicas);
+        setRule(response.data.politica.normas);
+        setHealth(response.data.politica.salud)
+        setCancellation(response.data.politica.cancelaciones)
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      });
+  }
 
 
-   const filterByCategoria = (name) => {
+  const filterByCategoria = (id) => { 
 
-    let idCategoria
-
-    switch (name) {
-      case "Hoteles":
-        idCategoria = 1
-        break;
-      case "Hostels":
-        idCategoria = 2
-        break;
-      case "Departamentos":
-        idCategoria = 3
-        break;
-      case "Bed & Breakfast":
-        idCategoria = 4
-        break;      
-    }
-
-    axios.get(`http://localhost:8080/productos?categoria=${idCategoria}`)
+    axios.get(`http://18.117.8.179/productos?categoria=${id}`)
       .then(function (response) {
         setProducts(response.data)
       })
@@ -71,22 +70,38 @@ useEffect(() => {
         console.log(error);
       });
   }
-  
 
-const data = {
-   products,
-   setProducts,
-   description,
-   selectedData,
-   filterByCategoria
-}
+  const filterByCity = (cityId) => {  
+      
+    axios.get(`http://18.117.8.179/productos?ciudad=${cityId}`)
+      .then(function (response) {
+        setProducts(response.data)
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      });
+  }
+
+  const data = {
+    products,
+    setProducts,
+    description,
+    selectedData,
+    filterByCategoria,
+    filterByCity,
+    caracteristicas,
+    rules,
+    health,
+    cancellation
 
 
+  }
 
   return (
-      <ProductContex.Provider value={data}>
-        {children}
-      </ProductContex.Provider>
+    <ProductContex.Provider value={data}>
+      {children}
+    </ProductContex.Provider>
   )
 }
 

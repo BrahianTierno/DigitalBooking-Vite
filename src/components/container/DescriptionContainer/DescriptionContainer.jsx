@@ -11,19 +11,23 @@ import StandardImageList from '../../pure/ListImages/ListImages'
 import styles from './descriptionContainer.module.css'
 import Carrusel from '../../utils/Carrusel/Carrusel'
 import LikeButton from '../../utils/LikeButton'
-import data from '../../../staticData/hoteles.json'
-import axios from 'axios';
+
 import { ProductContex } from '../../../context/ProductContex'
+import Caracteristicas from '../../pure/Caracteristicas/Caracteristicas'
+import Politics from '../../pure/Politics/Politics.jsx'
+import Calendar from '../../pure/DatePicker/Calendar'
 
 const DescriptionContainer = () => {
 
-    let { id } = useParams();  
-
-    const {description,selectedData} =  useContext(ProductContex); 
+    let { id } = useParams();       
        
     useEffect(() => {        
         description(id)  
-    }, [])
+    }, [id])
+
+    const {description,selectedData,caracteristicas,rules,health,cancellation} =  useContext(ProductContex);  
+    
+  
 
     const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -39,15 +43,18 @@ const DescriptionContainer = () => {
 
 
     return (
-        <>
-            <section className={styles.top}>
+        <div className={styles.container} >
+        {
+            selectedData && (
+                <div>
+                 <section className={styles.top}>
                 <div className={styles.titleDesc}>
-                    {/* <h6>{selectedData.categoria.titulo}</h6> */}
+                     <h6>{selectedData.categoria?.titulo}</h6>
                     <h1>{selectedData.nombre}</h1>
                     <Link to="/home"><MdOutlineArrowBackIos /></Link>
                 </div>
                 <div className={styles.divDesc}>
-                    {/* <p className={styles.ubication}><MdLocationOn /> {selectedData.ciudad.nombre}, País, a 00m del centro</p> */}
+                     <p className={styles.ubication}><MdLocationOn /> {selectedData.ciudad?.nombre}, Argentina</p> 
                     <div className={styles.puntaje}>
                         <p>{selectedData.valoracion}<span>{selectedData.calificacion}</span></p>
                         <div className={styles.stars}>
@@ -106,28 +113,31 @@ const DescriptionContainer = () => {
                 </p>
                 <br />
                 <h4>¿Qué ofrece este lugar?</h4>
-                <hr />
+                <hr /> 
+                
                 <div className={styles.iconList}>
-                    <ul className={styles.iconServices}>
-                        <li><MdOutlineCountertops className={styles.icons} /> Cocina</li>
-                        <li><MdOutlineDirectionsCar className={styles.icons} /> Estacionamiento</li>
-                        <li><CgScreen className={styles.icons} /> Televisor</li>
-                        <li><FaSwimmer className={styles.icons} /> Piscina</li>
-                        <li><FaRegSnowflake className={styles.icons} /> Aire acondicionado</li>
-                        <li><FaWifi className={styles.icons} /> Wifi</li>
-                        <li><MdPets className={styles.icons} /> Apto mascotas</li>
-                    </ul>
+                    <ul className={styles.iconServices}>                        
+                        {caracteristicas?.map((item)=>{
+                        return <Caracteristicas key={item.id} description={item.descripcion} icon={item.icono} />
+                        })}
+                    </ul>       
+                                         
                 </div>
             </section>
             <section className={styles.dateDisponible}>
                 <h4>Fechas disponibles</h4>
+                <Calendar />
+                <div className={styles.divCalendar}>
+                    <p className={styles.textCalendar}>Agregá tus fechas de viaje para obtener precios exactos</p>
+                    <button className={styles.btnCalendar}>Iniciar reserva</button>
+                </div>
             </section>
             <br />
             <section className={styles.mapaContainer}>
                 <h4>¿Dónde vas a estar?</h4>
                 <hr />
                 <div className={styles.mapa}>
-                    <MapView />
+                    <MapView latitud={selectedData.latitud} longitud={selectedData.longitud} />
                 </div>
             </section>
             <br />
@@ -137,23 +147,30 @@ const DescriptionContainer = () => {
                 <div className={styles.listas}>
                     <ul className={styles.list1}>
                         <li className={styles.titleNormas}>Normas de la casa</li>
-                        <li>Check-out: 10:00hs.</li>
-                        <li>No se permiten fiestas.</li>
-                        <li>No fumar.</li>
+                        {rules.map((item) =>{                
+                            return <Politics key={item.id} politics={item.item_norma} />
+                        })}
                     </ul>
                     <ul className={styles.list2}>
                         <li className={styles.titleNormas}>Salud y seguridad</li>
-                        <li>Se aplican las pautas de distanciamiento social y otras normas relacionadas con el coronavirus.</li>
-                        <li>Detector de humo.</li>
-                        <li>Depósito de seguridad.</li>
+                        {health.map((item) =>{                
+                            return <Politics key={item.id} politics={item.item_salud} />
+                        })}
                     </ul>
                     <ul className={styles.list3}>
-                        <li className={styles.titleNormas}>Política de cancelación</li>
-                        <li>Agregá las fechas de tu viaje para obtener los detalles de cancelación de esta estadía.</li>
+                        <li className={styles.titleNormas}>Política de cancelación</li>                    
+                        {cancellation.map((item) =>{                
+                            return <Politics key={item.id} politics={item.item_cancelacion} />
+                        })}
                     </ul>
                 </div>
             </section>
-        </> )
+            </div>
+
+            )
+         }
+           
+         </div> )
 }
 
 export default DescriptionContainer

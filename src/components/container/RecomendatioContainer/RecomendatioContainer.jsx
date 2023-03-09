@@ -8,8 +8,7 @@ const RecomendatioContainer = () => {
 
 
     //Contexto de productos
-    const {products} =  useContext(ProductContex);  
-   
+    const {products} =  useContext(ProductContex);       
    
   return (
     <div className={styles.container}>

@@ -2,9 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-top: 1.5rem;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 1.5em;
 }
 
 .left{
@@ -12,14 +12,12 @@
     align-items: center;
 }
 
-.logo{
-   
-}
+
 
 .title{
     text-decoration: none;
     color: #545776;
-    font-size: 1.5rem;
+    font-size: 1.7em;
     font-style: italic;
     font-weight: lighter;
     margin-top: 1rem;
@@ -62,6 +60,15 @@
   @media  (max-width : 903px) {
         .title{
             display: none;
+        }
+
+        .logo{
+            width: 60px;
+            height: 50px;
+        }
+
+        .btn{
+            width: 11rem;
         }
   }
 

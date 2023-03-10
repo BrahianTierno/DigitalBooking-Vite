@@ -1,0 +1,12 @@
+.datePicker{
+    width: 25vw;
+    
+}
+
+@media  (max-width : 532px) {
+    
+    .datePicker{
+        width: 95vw;
+        margin-bottom: 1em;
+    }
+}

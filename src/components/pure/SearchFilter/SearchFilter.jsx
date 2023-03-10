@@ -15,7 +15,7 @@ const SearchFilter = () => {
 
   useEffect(() => {    
 
-    axios.get("http://18.117.8.179/ciudades")
+    axios.get("http://localhost:8080/ciudades")
     .then(function (response) {      
       setCities(response.data)           
     })

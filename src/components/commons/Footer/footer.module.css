@@ -1,13 +1,14 @@
 .container{
     display: flex;
-    position: absolute;
     justify-content: space-between;
     flex-wrap: wrap;
     background-color: #1DBEB4 ;
     width: 100%;
-    height: 15%;
-    bottom: auto;
+    height: 4em;    
+    position: fixed;
     color: white;
+    bottom: 0px;
+    
 }
 
 .pFooter{

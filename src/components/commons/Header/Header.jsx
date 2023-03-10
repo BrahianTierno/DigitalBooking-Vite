@@ -13,7 +13,7 @@ const Header = () => {
   //Contexto Global de Auth
   const {isLogged , setIsLogged} =  useContext(AuthContex);
 
-  console.log(isLogged);
+
 
   const location = useLocation();
   const navigator = useNavigate();
@@ -35,7 +35,7 @@ const Header = () => {
         )
            
       }
-        <a className={styles.burgerMenu}><FiAlignJustify size={50}/></a> 
+        <a className={styles.burgerMenu}><FiAlignJustify size={40}/></a> 
     </div>
   )
 }

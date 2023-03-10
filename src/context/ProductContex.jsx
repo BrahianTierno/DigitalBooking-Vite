@@ -27,8 +27,8 @@ const ProductContexProvider = ({ children }) => {
 
 
   useEffect(() => {
-
-    const url = "http://18.117.8.179/productos"
+    
+    const url = "http://localhost:8080/productos"
     axios.get(url)
       .then(function (response) {
         setProducts(response.data)
@@ -44,7 +44,7 @@ const ProductContexProvider = ({ children }) => {
   //Funcion para la descripcion
   const description = (id) => {
 
-    axios.get(`http://18.117.8.179/productos/${id}`)
+    axios.get(`http://localhost:8080/productos/${id}`)
       .then(function (response) {
         setSelectedData(response.data)
         setCaracteristicas(response.data.caracteristicas);
@@ -61,7 +61,7 @@ const ProductContexProvider = ({ children }) => {
 
   const filterByCategoria = (id) => { 
 
-    axios.get(`http://18.117.8.179/productos?categoria=${id}`)
+    axios.get(`http://localhost:8080/productos?categoria=${id}`)
       .then(function (response) {
         setProducts(response.data)
       })
@@ -73,7 +73,7 @@ const ProductContexProvider = ({ children }) => {
 
   const filterByCity = (cityId) => {  
       
-    axios.get(`http://18.117.8.179/productos?ciudad=${cityId}`)
+    axios.get(`http://localhost:8080/productos?ciudad=${cityId}`)
       .then(function (response) {
         setProducts(response.data)
       })
